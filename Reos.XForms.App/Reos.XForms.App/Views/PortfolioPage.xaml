@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Reos.XForms.App.Views.PortfolioPage"
+             xmlns:view="clr-namespace:Reos.XForms.App;assembly=Reos.XForms.App"
+             Title="Portföylerim">
+    
+    <ListView x:Name="portfolioListView" SeparatorVisibility="Default" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" RowHeight="120" SeparatorColor="Black" ItemSelected="OnItemSelected">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <view:PortfolioItemTemplate></view:PortfolioItemTemplate>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  
+  
+</ContentPage>

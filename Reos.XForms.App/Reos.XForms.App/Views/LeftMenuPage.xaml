@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Reos.XForms.App.Views.LeftMenuPage"
+             xmlns:control="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             Title="Menu">
+
+  <StackLayout VerticalOptions="FillAndExpand" Padding="0,20,0,0" BackgroundColor="#eeeeee">
+
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="200" RowSpacing="3" BackgroundColor="#235e6d" Padding="5">
+
+      <Grid.row>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+      </Grid.row>
+
+      <Image Source="reos_logo.png" Aspect="Fill" WidthRequest="50" HeightRequest="50" Grid.Row="0" Grid.RowSpan="5"></Image>
+
+      <Image Source="nomac.jpg" Aspect="AspectFill"  Grid.Row="0" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="100" HeightRequest="100" Grid.RowSpan="3"></Image>
+      
+      <Label Text="Murat Yılmaz" FontSize="20" TextColor="White" FontAttributes="Bold" HorizontalOptions="StartAndExpand" VerticalOptions="End" Grid.Row="3"></Label>
+      <Label Text="murat.yilmaz@anahtarteknoloji.com" FontSize="15" TextColor="White" FontAttributes="Bold" HorizontalOptions="StartAndExpand" VerticalOptions="End" Grid.Row="4"></Label>
+
+    </Grid>
+
+    <ListView x:Name="menuListView" SeparatorVisibility="None" VerticalOptions="FillAndExpand" BackgroundColor="#eeeeee">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ImageCell Text="{Binding Title}" ImageSource="{Binding IconSource}"></ImageCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+
+    </ListView>
+  </StackLayout>
+</ContentPage>
