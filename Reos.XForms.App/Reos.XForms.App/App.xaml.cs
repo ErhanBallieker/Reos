@@ -7,7 +7,6 @@ namespace Reos.XForms.App
 {
     public partial class App : Application, ILoginHelper
     {
-        //test check.. edit...1234123345512341234
         public App()
         {
             InitializeComponent();
